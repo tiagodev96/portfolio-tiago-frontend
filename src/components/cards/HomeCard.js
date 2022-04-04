@@ -24,6 +24,8 @@ function HomeCard() {
           <li>JavaScript</li>
           <li>React</li>
           <li>Node</li>
+          <li>Git / GitHub</li>
+          <li>Bootstrap</li>
         </ul>
       </div>
     </div>
