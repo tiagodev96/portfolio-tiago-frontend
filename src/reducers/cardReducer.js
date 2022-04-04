@@ -28,13 +28,10 @@ function cardReducer(state = initialState, { type, payload }) {
           return state;
       }
     case "HOME":
-      console.log("Home clicked");
       return { ...state, menuCollapse: true, page: "HOME" };
     case "PORTFOLIO":
-      console.log("Portfolio clicked");
       return { ...state, menuCollapse: true, page: "PORTFOLIO" };
     case "CONTACT":
-      console.log("Contact clicked");
       return { ...state, menuCollapse: true, page: "CONTACT" };
     case "HANDLE_MENU":
       return {
