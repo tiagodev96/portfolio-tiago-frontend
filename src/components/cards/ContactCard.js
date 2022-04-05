@@ -1,6 +1,9 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 
 function ContactCard() {
+  const dispatch = useDispatch();
+
   return (
     <div className="card-container">
       <h3 className="text-white font-bold">Contact Me</h3>
@@ -57,12 +60,24 @@ function ContactCard() {
         ease-in-out
         focus:text-gray-700 focus:bg-white focus:border-[#d81e5b] focus:outline-none sm:w-full
       "
-            id="exampleFormControlTextarea1"
+            id="message"
             rows="3"
             placeholder="Your message"
           ></textarea>
         </div>
-        <button className="w-20 rounded h-10 bg-[#d81e5b] text-[#fbf9ff] m-auto hover:scale-110 duration-300">
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            dispatch({
+              type: "SEND_MESSAGE",
+              payload: {
+                name: document.querySelector("#name").value,
+                message: document.querySelector("#message").value,
+              },
+            });
+          }}
+          className="w-20 rounded h-10 bg-[#d81e5b] text-[#fbf9ff] m-auto hover:scale-110 duration-300"
+        >
           Send
         </button>
         <p className="text-gray-400 text-sm">

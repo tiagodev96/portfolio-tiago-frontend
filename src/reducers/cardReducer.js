@@ -7,6 +7,7 @@ const linkGithub = "https://github.com/tiagodev96";
 const linkInstagram = "https://instagram.com";
 const linkWhatsapp = "https://wa.me/5571993553196";
 const linkLinkedin = "https://www.linkedin.com/in/tiagocb96/";
+const myCurrentPhone = "5571993553196";
 
 const projects = {
   guessTheWord: {
@@ -63,6 +64,14 @@ function cardReducer(state = initialState, { type, payload }) {
         if (key === payload) clickedProject = value;
       });
       window.open(clickedProject.url, "_blank");
+      return { ...state };
+    case "SEND_MESSAGE":
+      let name = payload.name;
+      let message = payload.message;
+      let fullMessage = `Hello, my name is ${name}. ${message}`;
+      let threatedMessage = fullMessage.replace(" ", "%20");
+      let template = `https://api.whatsapp.com/send?phone=${myCurrentPhone}&text=${threatedMessage}`;
+      window.open(template, "_blank");
       return { ...state };
     default:
       return state;
