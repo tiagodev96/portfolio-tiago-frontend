@@ -156,9 +156,16 @@ p {
   color: var(--dark-blue);
   border-bottom: 2px solid var(--dark-blue);
   padding-bottom: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-top: 10px;
 }
 
 @media (max-width: 440px) {
+  .card-portfolio {
+    padding: 5px;
+  }
+
   .project-container {
     padding-bottom: 30px;
   }
@@ -212,8 +219,5 @@ p {
 .project-button:hover {
   background-color: var(--pink);
 }
-<<<<<<< HEAD
 
 /** -------------- CONTACT CARD CSS -------------- */
-=======
->>>>>>> 6ee59b602b19dbaae2eeecc7e9c5bcbdcfeada28

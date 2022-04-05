@@ -1,8 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
-  --dark-blue: #041A3F;
-  --light-blue: #05C3C4;
-  --pink: #D81E5B;
-  --white: #FBF9FF;
+  --dark-blue: #041a3f;
+  --light-blue: #05c3c4;
+  --pink: #d81e5b;
+  --white: #fbf9ff;
 }
 
 *,

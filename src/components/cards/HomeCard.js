@@ -4,7 +4,7 @@ function HomeCard() {
   return (
     <div className="card-container">
       <span className="pro">FRONT-END DEVELOPER</span>
-      <div>
+      <div className="flex flex-col justify-center items-center">
         <img className="round" alt="user" src="./assets/perfil-image.png" />
         <h3>Tiago Batista</h3>
         <h6>Brazil | Portugal</h6>

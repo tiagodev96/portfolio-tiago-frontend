@@ -13,14 +13,16 @@ function Card() {
   });
 
   function renderPage() {
-    let isPageHome = state.page === "HOME";
-    let isPagePortfolio = state.page === "PORTFOLIO";
-    let isPageContact = state.page === "CONTACT";
-
-    if (isPageHome) return <HomeCard></HomeCard>;
-    if (isPagePortfolio) return <PortfolioCard></PortfolioCard>;
-    if (isPageContact) return <ContactCard></ContactCard>;
-    return;
+    switch (state.page) {
+      case "HOME":
+        return <HomeCard></HomeCard>;
+      case "PORTFOLIO":
+        return <PortfolioCard></PortfolioCard>;
+      case "CONTACT":
+        return <ContactCard></ContactCard>;
+      default:
+        return <HomeCard></HomeCard>;
+    }
   }
 
   return (

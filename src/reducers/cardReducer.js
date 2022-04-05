@@ -8,6 +8,25 @@ const linkInstagram = "https://instagram.com";
 const linkWhatsapp = "https://wa.me/5571993553196";
 const linkLinkedin = "https://www.linkedin.com/in/tiagocb96/";
 
+const projects = {
+  guessTheWord: {
+    name: "Guess The Word",
+    url: "https://guesstheword-dusky.vercel.app/",
+  },
+  metodoHayat: {
+    name: "Método Hayat",
+    url: "https://metodohayat.com/",
+  },
+  classicCalculator: {
+    name: "Classic Calculator",
+    url: "https://calculator-react-project.vercel.app/",
+  },
+  memoryGame: {
+    name: "Classic Memory Game",
+    url: "https://memory-game-project.vercel.app/",
+  },
+};
+
 function cardReducer(state = initialState, { type, payload }) {
   switch (type) {
     case "REDIRECT":
@@ -38,6 +57,13 @@ function cardReducer(state = initialState, { type, payload }) {
         ...state,
         menuCollapse: !state.menuCollapse,
       };
+    case "REDIRECT_PROJECT":
+      let clickedProject;
+      Object.entries(projects).forEach(([key, value]) => {
+        if (key === payload) clickedProject = value;
+      });
+      window.open(clickedProject.url, "_blank");
+      return { ...state };
     default:
       return state;
   }

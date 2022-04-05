@@ -1,12 +1,14 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper";
+import { useDispatch } from "react-redux";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 function PortfolioCard() {
+  const dispatch = useDispatch();
   const breakpointConfig = {
     0: {
       slidesPerView: 1,
@@ -46,7 +48,17 @@ function PortfolioCard() {
                 <li className="project-list-item">ReactJS</li>
               </ul>
             </div>
-            <button className="project-button">Visit Website</button>
+            <button
+              onClick={() =>
+                dispatch({
+                  type: "REDIRECT_PROJECT",
+                  payload: "guessTheWord",
+                })
+              }
+              className="project-button"
+            >
+              Visit Website
+            </button>
           </div>
         </SwiperSlide>
         <SwiperSlide className="project-container">
@@ -65,7 +77,17 @@ function PortfolioCard() {
                 <li className="project-list-item">JavaScript</li>
               </ul>
             </div>
-            <button className="project-button">Visit Website</button>
+            <button
+              onClick={() =>
+                dispatch({
+                  type: "REDIRECT_PROJECT",
+                  payload: "metodoHayat",
+                })
+              }
+              className="project-button"
+            >
+              Visit Website
+            </button>
           </div>
         </SwiperSlide>
         <SwiperSlide className="project-container">
@@ -84,7 +106,17 @@ function PortfolioCard() {
                 <li className="project-list-item">ReactJS</li>
               </ul>
             </div>
-            <button className="project-button">Visit Website</button>
+            <button
+              onClick={() =>
+                dispatch({
+                  type: "REDIRECT_PROJECT",
+                  payload: "classicCalculator",
+                })
+              }
+              className="project-button"
+            >
+              Visit Website
+            </button>
           </div>
         </SwiperSlide>
         <SwiperSlide className="project-container">
@@ -103,7 +135,17 @@ function PortfolioCard() {
                 <li className="project-list-item">ReactJS</li>
               </ul>
             </div>
-            <button className="project-button">Visit Website</button>
+            <button
+              onClick={() =>
+                dispatch({
+                  type: "REDIRECT_PROJECT",
+                  payload: "memoryGame",
+                })
+              }
+              className="project-button"
+            >
+              Visit Website
+            </button>
           </div>
         </SwiperSlide>
       </Swiper>
