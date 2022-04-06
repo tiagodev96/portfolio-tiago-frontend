@@ -80,8 +80,10 @@ function ContactCard() {
         >
           Send
         </button>
+
         <p className="text-gray-400 text-sm">
-          You may also call me at +55 71 9 9355-3196
+          You may also call me at
+          <a href="tel:+5571993553196">+55 71 9 9355-3196</a>
         </p>
       </form>
     </div>
