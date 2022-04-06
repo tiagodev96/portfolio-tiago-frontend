@@ -148,6 +148,8 @@ p {
 
 .project-image {
   border-radius: 5px 5px 0 0;
+  object-fit: cover;
+  object-position: 50% 0%;
   height: 300px;
   width: 100%;
 }
@@ -176,7 +178,7 @@ p {
 }
 
 .project-techs {
-  align-items: center;
+  align-items: flex-end;
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
