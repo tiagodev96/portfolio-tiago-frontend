@@ -34,7 +34,7 @@ function PortfolioCard() {
       >
         <SwiperSlide className="project-container">
           <img
-            src="https://source.unsplash.com/random"
+            src="./assets/guessTheWord/screenshot-desktop-lettercheck.png"
             className="project-image"
             alt="thisProjectImage"
           ></img>
@@ -63,7 +63,7 @@ function PortfolioCard() {
         </SwiperSlide>
         <SwiperSlide className="project-container">
           <img
-            src="https://source.unsplash.com/random"
+            src="./assets/metodoHayat/desktop-homepage.png"
             className="project-image"
             alt="thisProjectImage"
           ></img>
@@ -92,7 +92,7 @@ function PortfolioCard() {
         </SwiperSlide>
         <SwiperSlide className="project-container">
           <img
-            src="https://source.unsplash.com/random"
+            src="./assets/classicCalculator/desktop-screenshot.png"
             className="project-image"
             alt="thisProjectImage"
           ></img>
@@ -121,7 +121,7 @@ function PortfolioCard() {
         </SwiperSlide>
         <SwiperSlide className="project-container">
           <img
-            src="https://source.unsplash.com/random"
+            src="./assets/memoryGame/desktop-unsolved.png"
             className="project-image"
             alt="thisProjectImage"
           ></img>
