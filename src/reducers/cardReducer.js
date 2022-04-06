@@ -69,7 +69,7 @@ function cardReducer(state = initialState, { type, payload }) {
       let name = payload.name;
       let message = payload.message;
       let fullMessage = `Hello, my name is ${name}. ${message}`;
-      let threatedMessage = fullMessage.replace(" ", "%20");
+      let threatedMessage = encodeURIComponent(fullMessage);
       let template = `https://api.whatsapp.com/send?phone=${myCurrentPhone}&text=${threatedMessage}`;
       window.open(template, "_blank");
       return { ...state };
